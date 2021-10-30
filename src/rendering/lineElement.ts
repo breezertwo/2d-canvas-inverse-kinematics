@@ -18,7 +18,12 @@ export class LineElement {
 		const target = new Vec2D(tx, ty);
 		const dir = target.subtract(this.a);
 
-		this.angle = dir.angle;
+		this.angle = dir.getAngle();
+
+		dir.setMagnitude(this.len);
+		dir.multiplyBy(-1);
+
+		this.a = target.add(dir);
 	}
 
 	private calcB() {
