@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-right: 50px;
+}
+
+canvas {
+	width: 1200px;
+	height: 600px;
+	background-color: #e0e3dc;
+}
+
+#link {
+	margin-top: 50px;
+	font-size: 12px;
+	font-style: italic;
+}
+
+.canvasContainer {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.sidetab {
+	display: flex;
+	flex-direction: column;
+	min-width: 100px;
+	max-height: 600px;
+	background-color: beige;
+	flex-grow: 2;
+	overflow: auto;
+}
