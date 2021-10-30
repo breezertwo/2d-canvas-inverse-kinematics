@@ -7,10 +7,10 @@ export function line(
 	x2: number,
 	y2: number,
 	width?: number,
-	color?: number
+	color?: string
 ): void {
 	typeof width === 'number' ? (ctx.lineWidth = width) : (ctx.lineWidth = 5);
-	typeof color === 'string' ? (ctx.strokeStyle = color) : '##000000';
+	typeof color === 'string' ? (ctx.strokeStyle = color) : (ctx.strokeStyle = '##000000');
 
 	ctx.beginPath();
 	ctx.moveTo(x1, y1);
