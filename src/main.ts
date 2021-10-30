@@ -1,17 +1,18 @@
 import { LineElement } from './rendering';
 
-import './style/main.css';
+import { mouse } from './util';
 
 const canvas = document.getElementById('canvas') as HTMLCanvasElement;
 const context = canvas.getContext('2d') as CanvasRenderingContext2D;
 
-const seg = new LineElement(300, 200, 100, 0);
+const line = new LineElement(300, 200, 100, 0);
 
 function draw(): void {
 	context.clearRect(0, 0, canvas.width, canvas.height);
 
-	seg.update();
-	seg.show();
+	line.follow(mouse.x, mouse.y);
+	line.update();
+	line.show();
 
 	requestAnimationFrame(draw);
 }

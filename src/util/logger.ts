@@ -5,7 +5,7 @@ const msgs: Node[] = [];
 console.log = (msg) => {
 	former(msg);
 
-	const log = document.getElementsByClassName('sidetab')[0];
+	const log = document.getElementsByClassName('log')[0];
 
 	while (log.firstChild) {
 		log.removeChild(log.lastChild!);

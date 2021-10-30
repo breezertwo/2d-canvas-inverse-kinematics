@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	height: 100vh;
 	overflow: hidden;
+	font-size: 16px;
 }
 
 .main {
@@ -36,8 +37,20 @@ canvas {
 	display: flex;
 	flex-direction: column;
 	min-width: 100px;
+	max-width: 500px;
 	max-height: 600px;
-	background-color: beige;
+	margin-left: 2em;
 	flex-grow: 2;
+	background-color: beige;
+}
+
+.log {
+	margin: 1em;
+	font-size: 0.75em;
+	font-family: monospace;
 	overflow: auto;
+
+	span {
+		margin-bottom: 0.25em;
+	}
 }

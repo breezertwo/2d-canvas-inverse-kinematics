@@ -14,6 +14,13 @@ export class LineElement {
 		this.angle = _angle;
 	}
 
+	public follow(tx: number, ty: number) {
+		const target = new Vec2D(tx, ty);
+		const dir = target.subtract(this.a);
+
+		this.angle = dir.angle;
+	}
+
 	private calcB() {
 		const dx = this.len * Math.cos(this.angle);
 		const dy = this.len * Math.sin(this.angle);
