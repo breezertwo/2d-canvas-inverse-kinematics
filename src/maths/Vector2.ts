@@ -1,9 +1,9 @@
 // Based on Vector.js
 // by jjgrainger: https://gist.github.com/jjgrainger/808640fcb5764cf92c3cad960682c677
-// Translated to Vec2D.ts
+// Translated to Vector2.ts
 // by breezertwo
 
-export class Vec2D {
+export class Vector2 {
 	public x: number;
 	public y: number;
 
@@ -38,30 +38,30 @@ export class Vec2D {
 	}
 
 	// add two vectors together and return a new one
-	public add(v2: Vec2D) {
-		return new Vec2D(this.x + v2.x, this.y + v2.y);
+	public add(v2: Vector2) {
+		return new Vector2(this.x + v2.x, this.y + v2.y);
 	}
 
 	// add a vector to this one
-	public addTo(v2: Vec2D) {
+	public addTo(v2: Vector2) {
 		this.x += v2.x;
 		this.y += v2.y;
 	}
 
 	// subtract two vectors and reutn a new one
-	public subtract(v2: Vec2D) {
-		return new Vec2D(this.x - v2.x, this.y - v2.y);
+	public subtract(v2: Vector2) {
+		return new Vector2(this.x - v2.x, this.y - v2.y);
 	}
 
 	// subtract a vector from this one
-	public subtractFrom(v2: Vec2D) {
+	public subtractFrom(v2: Vector2) {
 		this.x -= v2.x;
 		this.y -= v2.y;
 	}
 
 	// multiply this vector by a scalar and return a new one
 	public multiply(scalar: number) {
-		return new Vec2D(this.x * scalar, this.y * scalar);
+		return new Vector2(this.x * scalar, this.y * scalar);
 	}
 
 	// multiply this vector by the scalar
@@ -72,7 +72,7 @@ export class Vec2D {
 
 	// scale this vector by scalar and return a new vector
 	public divide(scalar: number) {
-		return new Vec2D(this.x / scalar, this.y / scalar);
+		return new Vector2(this.x / scalar, this.y / scalar);
 	}
 
 	// scale this vector by scalar
@@ -82,7 +82,7 @@ export class Vec2D {
 	}
 
 	public normalize() {
-		return new Vec2D(
+		return new Vector2(
 			this.x / Math.sqrt(this.x * this.x + this.y * this.y),
 			this.y / Math.sqrt(this.x * this.x + this.y * this.y)
 		);
@@ -96,7 +96,7 @@ export class Vec2D {
 
 	// Utilities
 	public copy() {
-		return new Vec2D(this.x, this.y);
+		return new Vector2(this.x, this.y);
 	}
 
 	public toString() {
